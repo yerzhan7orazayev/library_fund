@@ -10,12 +10,12 @@ public class Driver {
 	
 	public static void main (String[] args) throws Exception {
 		// Display the list of menu
-		System.out.println("Меню доступных комманд:\n\n"
-				+ "1. Просмотр зарегистрированных изданий в фонде\n"
-				+ "2. Добавление нового издания в фонд\n"
-				+ "3. Просмотр информации выбранного издания\n"
-				+ "4. Удаление выбранного издания\n"
-				+ "5. Выход");
+		System.out.println("ГЊГҐГ­Гѕ Г¤Г®Г±ГІГіГЇГ­Г»Гµ ГЄГ®Г¬Г¬Г Г­Г¤:\n\n"
+				+ "1. ГЏГ°Г®Г±Г¬Г®ГІГ° Г§Г Г°ГҐГЈГЁГ±ГІГ°ГЁГ°Г®ГўГ Г­Г­Г»Гµ ГЁГ§Г¤Г Г­ГЁГ© Гў ГґГ®Г­Г¤ГҐ\n"
+				+ "2. Г„Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г­Г®ГўГ®ГЈГ® ГЁГ§Г¤Г Г­ГЁГї Гў ГґГ®Г­Г¤\n"
+				+ "3. ГЏГ°Г®Г±Г¬Г®ГІГ° ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГЁ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГЁГ§Г¤Г Г­ГЁГї\n"
+				+ "4. Г“Г¤Г Г«ГҐГ­ГЁГҐ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® ГЁГ§Г¤Г Г­ГЁГї\n"
+				+ "5. Г‚Г»ГµГ®Г¤");
 		
 		userPrompt();
 	}
@@ -23,7 +23,7 @@ public class Driver {
 	public static void userPrompt () throws Exception {
 		
 		// Prompt the user to enter the menu number
-		System.out.println("\nДля выполнения комманды выберите соответствующий номер из меню (1-5): ");
+		System.out.println("\nГ„Г«Гї ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї ГЄГ®Г¬Г¬Г Г­Г¤Г» ГўГ»ГЎГҐГ°ГЁГІГҐ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГ№ГЁГ© Г­Г®Г¬ГҐГ° ГЁГ§ Г¬ГҐГ­Гѕ (1-5): ");
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String menuChoice = reader.readLine();
@@ -33,7 +33,7 @@ public class Driver {
 		while ( !menuChoiceList.contains(menuChoice) ) {
 			
 		// Error message :(
-		System.out.println("Ошибка! Выберите число между 1-5 и введите снова... ");
+		System.out.println("ГЋГёГЁГЎГЄГ ! Г‚Г»ГЎГҐГ°ГЁГІГҐ Г·ГЁГ±Г«Г® Г¬ГҐГ¦Г¤Гі 1-5 ГЁ ГўГўГҐГ¤ГЁГІГҐ Г±Г­Г®ГўГ ... ");
 		menuChoice = reader.readLine();
 		
 		}
@@ -62,10 +62,10 @@ public class Driver {
 			idList.add( id );
 			
 			// User prompt for publication insertion
-			System.out.println("Какое издание хотите добавить?\n"
-					+ "1. Книга\n"
-					+ "2. Журнал\n"
-					+ "3. Брошюра");
+			System.out.println("ГЉГ ГЄГ®ГҐ ГЁГ§Г¤Г Г­ГЁГҐ ГµГ®ГІГЁГІГҐ Г¤Г®ГЎГ ГўГЁГІГј?\n"
+					+ "1. ГЉГ­ГЁГЈГ \n"
+					+ "2. Г†ГіГ°Г­Г Г«\n"
+					+ "3. ГЃГ°Г®ГёГѕГ°Г ");
 			
 			String insertionChoice = reader.readLine();
 			
@@ -73,7 +73,7 @@ public class Driver {
 			while ( !Arrays.asList("1", "2", "3" ).contains( insertionChoice ) ) {
 				
 				// Error message :(
-				System.out.println("Ошибка! Выберите число между 1-3 и введите снова... ");
+				System.out.println("ГЋГёГЁГЎГЄГ ! Г‚Г»ГЎГҐГ°ГЁГІГҐ Г·ГЁГ±Г«Г® Г¬ГҐГ¦Г¤Гі 1-3 ГЁ ГўГўГҐГ¤ГЁГІГҐ Г±Г­Г®ГўГ ... ");
 				insertionChoice = reader.readLine();
 				
 			}
@@ -131,7 +131,7 @@ public class Driver {
 		// Exiting the program
 		else {
 		
-			System.out.println("Программа завершилась");
+			System.out.println("ГЏГ°Г®ГЈГ°Г Г¬Г¬Г  Г§Г ГўГҐГ°ГёГЁГ«Г Г±Гј");
 			System.exit(0);
 		}
 		
@@ -142,13 +142,13 @@ public class Driver {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 				
 		// User prompts
-		System.out.println("Введите имя автора книги: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ¬Гї Г ГўГІГ®Г°Г  ГЄГ­ГЁГЈГЁ: ");
 		String author = reader.readLine();
 		
-		System.out.println("Введите наименование книги: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГЄГ­ГЁГЈГЁ: ");
 		String name = reader.readLine();
 		
-		System.out.println("Введите год издательства книги: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЈГ®Г¤ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ  ГЄГ­ГЁГЈГЁ: ");
 		int year;
 		while (true) {
 			try {
@@ -157,13 +157,13 @@ public class Driver {
 			}
 			
 			catch ( NumberFormatException exception ) {
-				System.out.println("Введите год издания в цифрах...");
+				System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЈГ®Г¤ ГЁГ§Г¤Г Г­ГЁГї Гў Г¶ГЁГґГ°Г Гµ...");
 			}
 			
 		}
 
 		
-		System.out.println("Введите количество страниц книги: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г Г­ГЁГ¶ ГЄГ­ГЁГЈГЁ: ");
 		int pageNumber;
 		
 		while (true) {
@@ -173,25 +173,25 @@ public class Driver {
 			}
 			
 			catch ( NumberFormatException exception ) {
-				System.out.println("Введите количество страниц в цифрах...");
+				System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г Г­ГЁГ¶ Гў Г¶ГЁГґГ°Г Гµ...");
 			}
 			
 		}
 
 		
 		
-		System.out.println("Введите издательство книги: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ® ГЄГ­ГЁГЈГЁ: ");
 		String publisher = reader.readLine();
 		
-		System.out.println("Введите жанр книги: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г¦Г Г­Г° ГЄГ­ГЁГЈГЁ: ");
 		String genre = reader.readLine();
 		
-		System.out.println("Введите краткое содержание книги: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ°Г ГІГЄГ®ГҐ Г±Г®Г¤ГҐГ°Г¦Г Г­ГЁГҐ ГЄГ­ГЁГЈГЁ: ");
 		String summary = reader.readLine();
 		
 		Book book = new Book(author, name, year, pageNumber, publisher, genre, summary);
 		
-		Entry entry = new Entry( id, "Книга", name, year, pageNumber, publisher, book );
+		Entry entry = new Entry( id, "ГЉГ­ГЁГЈГ ", name, year, pageNumber, publisher, book );
 		
 		table.add( entry );
 		
@@ -203,10 +203,10 @@ public class Driver {
 				
 		// User prompts
 
-		System.out.println("Введите наименование журнала: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ Г¦ГіГ°Г­Г Г«Г : ");
 		String name = reader.readLine();
 		
-		System.out.println("Введите год издательства журнала: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЈГ®Г¤ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ  Г¦ГіГ°Г­Г Г«Г : ");
 		int year;
 		while (true) {
 			try {
@@ -215,15 +215,15 @@ public class Driver {
 			}
 			
 			catch ( NumberFormatException exception ) {
-				System.out.println("Введите год издания в цифрах...");
+				System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЈГ®Г¤ ГЁГ§Г¤Г Г­ГЁГї Гў Г¶ГЁГґГ°Г Гµ...");
 			}
 			
 		}
 		
-		System.out.println("Введите месяц издательства журнала: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г¬ГҐГ±ГїГ¶ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ  Г¦ГіГ°Г­Г Г«Г : ");
 		String month = reader.readLine();
 		
-		System.out.println("Введите количество страниц журнала: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г Г­ГЁГ¶ Г¦ГіГ°Г­Г Г«Г : ");
 		int pageNumber;
 		
 		while (true) {
@@ -233,20 +233,20 @@ public class Driver {
 			}
 			
 			catch ( NumberFormatException exception ) {
-				System.out.println("Введите количество страниц в цифрах...");
+				System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г Г­ГЁГ¶ Гў Г¶ГЁГґГ°Г Гµ...");
 			}
 			
 		}
 		
-		System.out.println("Введите издательство журнала: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ® Г¦ГіГ°Г­Г Г«Г : ");
 		String publisher = reader.readLine();
 		
-		System.out.println("Введите список статей через запитую: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г±ГЇГЁГ±Г®ГЄ Г±ГІГ ГІГҐГ© Г·ГҐГ°ГҐГ§ Г§Г ГЇГЁГІГіГѕ: ");
 		String articles = reader.readLine();
 		
 		Magazine magazine = new Magazine( name, year, month, pageNumber, publisher, articles );
 		
-		Entry entry = new Entry( id, "Журнал", name, (year + " " + month), pageNumber, publisher, magazine );
+		Entry entry = new Entry( id, "Г†ГіГ°Г­Г Г«", name, (year + " " + month), pageNumber, publisher, magazine );
 		
 		table.add( entry );
 	}
@@ -257,10 +257,10 @@ public class Driver {
 				
 		// User prompts
 
-		System.out.println("Введите наименование брошюры: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГЎГ°Г®ГёГѕГ°Г»: ");
 		String name = reader.readLine();
 		
-		System.out.println("Введите год издательства брошюры: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЈГ®Г¤ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ  ГЎГ°Г®ГёГѕГ°Г»: ");
 		int year;
 		while (true) {
 			try {
@@ -269,23 +269,23 @@ public class Driver {
 			}
 			
 			catch ( NumberFormatException exception ) {
-				System.out.println("Введите год издания в цифрах...");
+				System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЈГ®Г¤ ГЁГ§Г¤Г Г­ГЁГї Гў Г¶ГЁГґГ°Г Гµ...");
 			}
 			
 		}
 		
-		System.out.println("Введите месяц издательства брошюры: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г¬ГҐГ±ГїГ¶ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ  ГЎГ°Г®ГёГѕГ°Г»: ");
 		String month = reader.readLine();
 		
-		System.out.println("Введите издательство брошюры: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ® ГЎГ°Г®ГёГѕГ°Г»: ");
 		String publisher = reader.readLine();
 		
-		System.out.println("Введите краткое описание брошюры: ");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ°Г ГІГЄГ®ГҐ Г®ГЇГЁГ±Г Г­ГЁГҐ ГЎГ°Г®ГёГѕГ°Г»: ");
 		String summary = reader.readLine();
 		
 		Brochure brochure = new Brochure( name, year, month, publisher, summary);
 
-		Entry entry = new Entry( id, "Брошюра", name, (year + " " + month), 0 , publisher, brochure );
+		Entry entry = new Entry( id, "ГЃГ°Г®ГёГѕГ°Г ", name, (year + " " + month), 0 , publisher, brochure );
 		
 		table.add( entry );
 	}
@@ -293,7 +293,7 @@ public class Driver {
 	public static void displayTable () {
 		
 		System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------");
-		System.out.printf( "%5s %15s %30s %30s %30s %30s", "ID", "Тип издания", "Наименование", "Время издания", "Количество страниц", "Издательство");
+		System.out.printf( "%5s %15s %30s %30s %30s %30s", "ID", "Г’ГЁГЇ ГЁГ§Г¤Г Г­ГЁГї", "ГЌГ ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ", "Г‚Г°ГҐГ¬Гї ГЁГ§Г¤Г Г­ГЁГї", "ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г Г­ГЁГ¶", "Г€Г§Г¤Г ГІГҐГ«ГјГ±ГІГўГ®");
 		System.out.println();
 		System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------");
 		for ( Entry entry: table ) {
@@ -307,7 +307,7 @@ public class Driver {
 	
 	public static void displayPublication() throws Exception {
 		
-		System.out.println("Укажите идентификатор записи для подробной информации: ");
+		System.out.println("Г“ГЄГ Г¦ГЁГІГҐ ГЁГ¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г° Г§Г ГЇГЁГ±ГЁ Г¤Г«Гї ГЇГ®Г¤Г°Г®ГЎГ­Г®Г© ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГЁ: ");
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int idChoice = Integer.parseInt( reader.readLine() );
@@ -315,7 +315,7 @@ public class Driver {
 		while ( !idList.contains( idChoice ) ) {
 			
 			// Error message :(
-			System.out.println("Ошибка! Укажите доступный идентификатор записи из таблицы... ");
+			System.out.println("ГЋГёГЁГЎГЄГ ! Г“ГЄГ Г¦ГЁГІГҐ Г¤Г®Г±ГІГіГЇГ­Г»Г© ГЁГ¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г° Г§Г ГЇГЁГ±ГЁ ГЁГ§ ГІГ ГЎГ«ГЁГ¶Г»... ");
 			idChoice = Integer.parseInt( reader.readLine() );
 			
 		}
@@ -324,26 +324,26 @@ public class Driver {
 			
 			if ( idChoice == entry.getId() ) {
 				
-				if ( entry.getType().equals("Книга") ) {
+				if ( entry.getType().equals("ГЉГ­ГЁГЈГ ") ) {
 					
-					String details = "Автор книги: " + entry.book.getAuthor() + "\n"
-							+ "Наименование книги: " + entry.book.getName() + "\n"
-									+ "Год издательства: " + entry.book.getYear() + "\n"
-											+ "Количество страниц: " + entry.book.getPageNumber() + "\n"
-													+ "Издательство: " + entry.book.getPublisher() + "\n"
-															+ "Жанр книги: " + entry.book.getGenre() + "\n"
-																	+ "Краткое содержание: " + entry.book.getSummary();
+					String details = "ГЂГўГІГ®Г° ГЄГ­ГЁГЈГЁ: " + entry.book.getAuthor() + "\n"
+							+ "ГЌГ ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГЄГ­ГЁГЈГЁ: " + entry.book.getName() + "\n"
+									+ "ГѓГ®Г¤ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ : " + entry.book.getYear() + "\n"
+											+ "ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г Г­ГЁГ¶: " + entry.book.getPageNumber() + "\n"
+													+ "Г€Г§Г¤Г ГІГҐГ«ГјГ±ГІГўГ®: " + entry.book.getPublisher() + "\n"
+															+ "Г†Г Г­Г° ГЄГ­ГЁГЈГЁ: " + entry.book.getGenre() + "\n"
+																	+ "ГЉГ°Г ГІГЄГ®ГҐ Г±Г®Г¤ГҐГ°Г¦Г Г­ГЁГҐ: " + entry.book.getSummary();
 					System.out.println( details );				
 					
 				}
 				
-				else if ( entry.getType().equals("Журнал") ) {
+				else if ( entry.getType().equals("Г†ГіГ°Г­Г Г«") ) {
 					
-					String details = "Наименование журнала: " + entry.magazine.getName() + "\n"
-							+ "Год и месяц издательства: " + (entry.magazine.getYear() + " " + entry.magazine.getMonth()) + "\n"
-											+ "Количество страниц: " + entry.magazine.getPageNumber() + "\n"
-													+ "Издательство: " + entry.magazine.getPublisher() + "\n"
-															+ "Список статей: " + entry.magazine.getArticles();
+					String details = "ГЌГ ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ Г¦ГіГ°Г­Г Г«Г : " + entry.magazine.getName() + "\n"
+							+ "ГѓГ®Г¤ ГЁ Г¬ГҐГ±ГїГ¶ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ : " + (entry.magazine.getYear() + " " + entry.magazine.getMonth()) + "\n"
+											+ "ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г Г­ГЁГ¶: " + entry.magazine.getPageNumber() + "\n"
+													+ "Г€Г§Г¤Г ГІГҐГ«ГјГ±ГІГўГ®: " + entry.magazine.getPublisher() + "\n"
+															+ "Г‘ГЇГЁГ±Г®ГЄ Г±ГІГ ГІГҐГ©: " + entry.magazine.getArticles();
 					System.out.println( details );	
 					
 					
@@ -351,10 +351,10 @@ public class Driver {
 				
 				else {
 					
-					String details = "Наименование брошюры: " + entry.brochure.getName() + "\n"
-							+ "Год и месяц издательства: " + (entry.brochure.getYear() + " " + entry.brochure.getMonth()) + "\n"
-											+ "Издательство: " + entry.brochure.getPublisher() + "\n"
-															+ "Краткое описание брошюры: " + entry.brochure.getSummary();
+					String details = "ГЌГ ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГЎГ°Г®ГёГѕГ°Г»: " + entry.brochure.getName() + "\n"
+							+ "ГѓГ®Г¤ ГЁ Г¬ГҐГ±ГїГ¶ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ : " + (entry.brochure.getYear() + " " + entry.brochure.getMonth()) + "\n"
+											+ "Г€Г§Г¤Г ГІГҐГ«ГјГ±ГІГўГ®: " + entry.brochure.getPublisher() + "\n"
+															+ "ГЉГ°Г ГІГЄГ®ГҐ Г®ГЇГЁГ±Г Г­ГЁГҐ ГЎГ°Г®ГёГѕГ°Г»: " + entry.brochure.getSummary();
 					System.out.println( details );	
 					
 				}
@@ -367,7 +367,7 @@ public class Driver {
 	
 	public static void deletePublication() throws Exception {
 		
-		System.out.println("Укажите идентификатор записи для удаления: ");
+		System.out.println("Г“ГЄГ Г¦ГЁГІГҐ ГЁГ¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г° Г§Г ГЇГЁГ±ГЁ Г¤Г«Гї ГіГ¤Г Г«ГҐГ­ГЁГї: ");
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int idChoice = Integer.parseInt( reader.readLine() );
@@ -375,7 +375,7 @@ public class Driver {
 		while ( !idList.contains( idChoice ) ) {
 			
 			// Error message :(
-			System.out.println("Ошибка! Укажите доступный идентификатор записи из таблицы... ");
+			System.out.println("ГЋГёГЁГЎГЄГ ! Г“ГЄГ Г¦ГЁГІГҐ Г¤Г®Г±ГІГіГЇГ­Г»Г© ГЁГ¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г° Г§Г ГЇГЁГ±ГЁ ГЁГ§ ГІГ ГЎГ«ГЁГ¶Г»... ");
 			idChoice = Integer.parseInt( reader.readLine() );
 			
 		}
@@ -388,7 +388,7 @@ public class Driver {
 					
 				iterator.remove();
 					
-				System.out.println("Выбранное издание успешно удалено.");
+				System.out.println("Г‚Г»ГЎГ°Г Г­Г­Г®ГҐ ГЁГ§Г¤Г Г­ГЁГҐ ГіГ±ГЇГҐГёГ­Г® ГіГ¤Г Г«ГҐГ­Г®.");
 			}
 		}
 
