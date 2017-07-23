@@ -1,2 +1,5 @@
 # library_fund
-Java console application for library fund
+# Библиотечный фонд
+
+Ранить через "Driver.class".
+
